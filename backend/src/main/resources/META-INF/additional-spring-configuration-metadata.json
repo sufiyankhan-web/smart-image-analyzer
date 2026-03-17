@@ -1,0 +1,34 @@
+{
+  "properties": [
+    {
+      "name": "app.cors.allowed-origin",
+      "type": "java.lang.String",
+      "description": "Allowed CORS origin for frontend requests.",
+      "defaultValue": "http://localhost:5173"
+    },
+    {
+      "name": "app.auth.customer-email",
+      "type": "java.lang.String",
+      "description": "Customer login email for dashboard authentication.",
+      "defaultValue": "customer@smartphoto.ai"
+    },
+    {
+      "name": "app.auth.customer-password",
+      "type": "java.lang.String",
+      "description": "Customer login password for dashboard authentication.",
+      "defaultValue": "Customer@123"
+    },
+    {
+      "name": "app.auth.customer-name",
+      "type": "java.lang.String",
+      "description": "Customer display name after login.",
+      "defaultValue": "Customer"
+    },
+    {
+      "name": "app.face.cascade-path",
+      "type": "java.lang.String",
+      "description": "Optional absolute path to Haar cascade XML file for face detection.",
+      "defaultValue": ""
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "info": {
+    "_postman_id": "9f402203-5c1c-4b86-a8ca-4a2809f5b0f0",
+    "name": "Smart Image Quality Analyzer API",
+    "description": "Postman collection for Smart Image Quality Analyzer backend APIs.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Upload Image",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/images/upload",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "images",
+            "upload"
+          ]
+        },
+        "description": "Uploads and analyzes an image. Supported: JPEG, PNG, WEBP."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Analysis By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/images/{{imageId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "images",
+            "{{imageId}}"
+          ]
+        },
+        "description": "Returns a specific image analysis record by id."
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Analyses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/images",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "images"
+          ]
+        },
+        "description": "Returns all analysis records sorted by upload time."
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Analysis By Id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/images/{{imageId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "images",
+            "{{imageId}}"
+          ]
+        },
+        "description": "Deletes an analysis record by id."
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    },
+    {
+      "key": "imageId",
+      "value": "1"
+    }
+  ]
+}
